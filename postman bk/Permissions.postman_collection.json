@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "a9d86f8e-ae05-4d94-a6e3-13c4dd19978b",
+		"name": "Permissions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9639851"
+	},
+	"item": [
+		{
+			"name": "Permissions List  API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/permissions/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"permissions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store New Permission API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/permissions?name=pages",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"permissions"
+					],
+					"query": [
+						{
+							"key": "guard_name",
+							"value": "sanctum",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "pages"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single And Multiple Permission Delete Along with role_permissions API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "permission_id[0]",
+							"value": "24",
+							"type": "text"
+						},
+						{
+							"key": "permission_id[1]",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "permission_id[2]",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "permission_id[3]",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/permissions/36",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"permissions",
+						"36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Permission Fetch API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/permissions/9",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"permissions",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Permission Name API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/permissions/14?name=configurations",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"permissions",
+						"14"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "configurations"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

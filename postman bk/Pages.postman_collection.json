@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "da481fd9-a7ca-4f28-9aea-58c9b5683fe4",
+		"name": "Pages",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9639851"
+	},
+	"item": [
+		{
+			"name": "List down all pages API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/pages",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"pages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sinlge Page Fetch API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/pages/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"pages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Page API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file_name",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/pages/1?title=Test Title &description=Test Description&auther=Ali E",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"pages",
+						"1"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Test Title "
+						},
+						{
+							"key": "description",
+							"value": "Test Description"
+						},
+						{
+							"key": "auther",
+							"value": "Ali E"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Single Page API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/pages/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"pages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store New Page API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file_name",
+							"type": "file",
+							"src": "C:\\Users\\ali_n\\Pictures\\Screenshots\\Screenshot 2024-01-25 002632.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/pages?title=Test page&description=Page Description&auther=Ali Baig",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"pages"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Test page"
+						},
+						{
+							"key": "description",
+							"value": "Page Description"
+						},
+						{
+							"key": "auther",
+							"value": "Ali Baig"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "ab7039cd-99ec-4eb3-8bbb-5a3a4d2e32b4",
+		"name": "Configurations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9639851"
+	},
+	"item": [
+		{
+			"name": "Configurations List API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/configurations",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Single Configuration API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/configurations/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"configurations",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update All Configurations API",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/configurations",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"configurations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

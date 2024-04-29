@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "884c6dfc-4245-40d6-9ac4-27585927283c",
+		"name": "Roles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9639851"
+	},
+	"item": [
+		{
+			"name": "Roles List API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/roles",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"roles"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Role Store API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/roles?name=New Test 1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"roles"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "New Test 1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Role Fetched API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/roles/22",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"roles",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Role Update API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/roles/22?name=TEST Sales",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"roles",
+						"22"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "TEST Sales"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selected Role Delete API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/roles/22",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"roles",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Associate Permission/s to Selected Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "permission_id[0]",
+							"value": "users-create",
+							"type": "text"
+						},
+						{
+							"key": "permission_id[1]",
+							"value": "users-edit",
+							"type": "text"
+						},
+						{
+							"key": "permission_id[2]",
+							"value": "users-delete",
+							"type": "text"
+						},
+						{
+							"key": "permission_id[3]",
+							"value": "users-view",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/roles/rolePermissionAssociation/28",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"roles",
+						"rolePermissionAssociation",
+						"28"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
