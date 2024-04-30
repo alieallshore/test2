@@ -61,9 +61,13 @@ class RoleService
             $data = $this->destroy($request, $id, $model);       
             return  response()->json([
                 'data' => $data,
+
+
                 'status' => true, 
+
+                
                 'message' => 'Role And Permissions destroyed.'      
-                          
+
             ]);            
         }
 
