@@ -62,9 +62,11 @@ class RoleService
             return  response()->json([
                 'data' => $data,
                 'status' => true, 
-                'message' => 'Role And Permissions destroyed.'                
+                'message' => 'Role And Permissions destroyed.'      
+                          
             ]);            
         }
+
     }
 
     /*
